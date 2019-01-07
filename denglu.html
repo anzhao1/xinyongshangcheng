@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/denglu.css"/>
+	</head>
+	<body>
+		<!-- 头 -->
+		<div class="box1">
+			<div class="box1_1">
+				<img class="tou_img" src="img/images/denglu2_03.png"/>
+				<div class="box1_2">
+					<span class="tou_span1">信用商城</span>
+					<span class="tou_span2">www.xysc.com</span>
+				</div>
+				<div class="box1_3">
+					<span class="tou_span3">欢迎登录</span>
+				</div>
+				<div class="box1_4">
+					<span class="tou_span4">客服热线:</span>
+					<span class="tou_span5">400-639-6566</span>
+				</div>
+			</div>
+		</div>
+		<!-- shen -->
+		<div class="box2">
+			<div class="box2_1">
+				<div class="box2_2">
+					<div class="box2_3">
+						<img class="shen_img" src="img/images/denglu2_03.png"/>
+						<p class="shen_p1">信用商城</p>
+					</div>
+					<div class="box2_4">
+						<p class="shen_p2">账户登录</p>
+						<p class="shen_p3"><a href="">注册</a></p>
+					</div>
+					
+						<p class="p01"><span id="mp01">请输入手机号</span></p>
+						<div class="box2_5_1"  id="mdiv01">
+							<input type="password" id="inp01" class="az-input" value="" placeholder="手机号"/>
+						</div>
+						<p class="p01"><span id="mp02">请输入密码</span></p>
+						<div class="box2_5_2" id="mdiv02">
+							
+							<input type="text" id="inp02" class="az-input1" value="" placeholder="密码"/>
+						</div>
+					<div class="box2_6">
+						<div class="box2_6_1" id="check_div">
+							<input type="checkbox" name="" id="" value="" />
+						</div>
+						<p class="box2_6_p1">记住密码</p>
+						<p class="box2_6_p2">忘记密码?</p>
+					</div>
+					<div class="box2_7">
+						<button class="pd_01">登陆</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- wei -->
+		<div class="box3">
+			<div class="box3_1">
+				<div class="box3_2">
+					<div class="box3_3">
+						<img src="img/images/logo1_03.png"/>
+					</div>
+					<div class="box3_4">
+						<span class="wei_span1">信用商城</span>
+						<span class="wei_span2">www.xysc.com</span>
+					</div>
+					<div class="box3_5">
+						<dl>
+							<dt>售后保障</dt>
+							<dd>退换货流程</dd>
+							<dd>售后服务承诺及政策</dd>
+						</dl>
+					</div>
+					<div class="box3_6">
+						<dl>
+							<dt>关于我们</dt>
+							<dd>公司信息</dd>
+							<dd>联系我们</dd>
+						</dl>
+					</div>
+					<div class="box3_7">
+						<p>扶贫认证<br />二维码</p>
+					</div>
+					<div class="box3_8">
+						<img src="img/erweima1.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+		var mdiv1 = document.getElementById("mdiv01");
+		var mp1 = document.getElementById("mp01");
+		var inp1 = document.getElementById("inp01");
+		
+			mdiv1.onmousemove= function(){
+				if(inp1.value==""){
+					mp1.style.display = "block";
+				}
+			}	
+			mdiv1.onmouseout= function(){
+				mp1.style.display = "none";
+			}
+		
+		
+		
+		var mdiv2 = document.getElementById("mdiv02");
+		var mp2 = document.getElementById("mp02");
+		var inp2 = document.getElementById("inp02");
+		
+			mdiv2.onmousemove= function(){
+				if(inp2.value==""){
+					mp2.style.display = "block";
+				}
+			}	
+			mdiv2.onmouseout= function(){
+				mp2.style.display = "none";
+			}
+		
+		var str =/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/;
+//			console.log(str)
+		var str1 =/^[a-zA-Z]\w{5,17}$/;
+		var dianji = document.getElementsByClassName("pd_01")[0];
+		var my_a = document.getElementsByClassName("pd_02")[0];
+			dianji.onclick=function(){
+				if (str.test(inp1.value)&&str1.test(inp2.value)) {
+					my_a.href="css/index.css"
+				}else{
+					alert("请输入正确手机号和：以字母开头，长度在6~18之间，只能包含字母、数字和下划线")
+				}
+			}
+			
+//		var box=document.getElementById("check_div");
+//		box.onclick=function(){
+//			box.style.background="green";
+//		}
+//		
+</script>
